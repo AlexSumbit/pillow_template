@@ -1,0 +1,80 @@
+@font-face {
+	font-family: "mogo-icons";
+	src: url('../font/mogo-icons.eot');
+	src: url('../font/mogo-icons.eot?#iefix') format('eot'),
+		url('../font/mogo-icons.woff2') format('woff2'),
+		url('../font/mogo-icons.woff') format('woff'),
+		url('../font/mogo-icons.ttf') format('truetype'),
+		url('../font/mogo-icons.svg#mogo-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "mogo-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == arrow-r {
+		$char: "\E001";
+	}
+	@if $filename == facebook {
+		$char: "\E002";
+	}
+	@if $filename == g-plus {
+		$char: "\E003";
+	}
+	@if $filename == play {
+		$char: "\E004";
+	}
+	@if $filename == search {
+		$char: "\E005";
+	}
+	@if $filename == twitter {
+		$char: "\E006";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-arrow-r {
+	@include icon(arrow-r);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-g-plus {
+	@include icon(g-plus);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-search {
+	@include icon(search);
+}
+.icon-twitter {
+	@include icon(twitter);
+}

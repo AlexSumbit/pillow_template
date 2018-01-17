@@ -1,0 +1,85 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color: unset;
+    text-decoration: unset;
+}
+
+.slider{
+    overflow: hidden;
+    position: relative;
+    outline: none;
+    user-select: none;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &__item{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: inline-flex;
+        outline: none;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+
+.logo{
+    font-family: 'Pacifico';
+    color: #fff;
+    font-size: 28px;
+    font-weight: normal;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 1px 2px;
+
+    &__selected{
+        color: lightcoral;
+    }
+}
+
+.nav{
+
+    &__item{
+        margin-left: 40px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
+
+.section{
+    overflow: auto;
+}
+
+.section-title{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: $title-primary;
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 10px;
+    
+    &:after{
+        content: " ";
+        width: 50px;
+        height: 3px;
+        background-color: lightcoral;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+}
+.section-sub-title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    color: $title-secondary;
+}
