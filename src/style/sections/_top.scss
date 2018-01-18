@@ -31,5 +31,31 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 30px;
+        &:before{
+            height: 0;
+            content: "";
+            display: block;
+            transform-origin: 50% 0;
+            height: 55px;
+            transform: scaleY(0);
+        }
+
+        &--sticky{
+            position: fixed;
+            margin-top: 0;
+            z-index: 999;
+
+            &:before{
+                transition: 0.3s transform;
+                content: "";
+                display: block;
+                position: fixed;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                transform: scaleY(1);
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        }
     }
 }
