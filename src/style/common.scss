@@ -163,13 +163,31 @@ a{
             
         }
     }
+
+    &--catalog{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        bottom: 100px;
+        width: 200px;
+        padding: 10px 0;
+        border: 2px solid #fff;
+        transition: 0.3s;
+        border-radius: 5px;
+
+        &:hover{
+            border-color: lightcoral;
+            color: lightcoral;
+            width: 230px;
+        }
+    }
 }
 
 @keyframes dots{
     from{width: 0px}
     to{width: 35px}
 }
-
 
 
 
