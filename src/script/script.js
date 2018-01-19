@@ -16,6 +16,7 @@ $(document).ready(function(){
             $(".js-header").addClass("header--sticky");
         } else{
             $(".js-header").removeClass("header--sticky");
+            $(".js-header").css("width", 'auto');
         }
     });
 });
