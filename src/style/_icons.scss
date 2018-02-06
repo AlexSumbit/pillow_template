@@ -1,15 +1,15 @@
 @font-face {
-	font-family: "mogo-icons";
-	src: url('../font/mogo-icons.eot');
-	src: url('../font/mogo-icons.eot?#iefix') format('eot'),
-		url('../font/mogo-icons.woff2') format('woff2'),
-		url('../font/mogo-icons.woff') format('woff'),
-		url('../font/mogo-icons.ttf') format('truetype'),
-		url('../font/mogo-icons.svg#mogo-icons') format('svg');
+	font-family: "icons";
+	src: url('../font/icons.eot');
+	src: url('../font/icons.eot?#iefix') format('eot'),
+		url('../font/icons.woff2') format('woff2'),
+		url('../font/icons.woff') format('woff'),
+		url('../font/icons.ttf') format('truetype'),
+		url('../font/icons.svg#icons') format('svg');
 }
 
 @mixin icon-styles {
-	font-family: "mogo-icons";
+	font-family: "icons";
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	font-style: normal;
@@ -27,23 +27,8 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == arrow-r {
+	@if $filename == hand {
 		$char: "\E001";
-	}
-	@if $filename == facebook {
-		$char: "\E002";
-	}
-	@if $filename == g-plus {
-		$char: "\E003";
-	}
-	@if $filename == play {
-		$char: "\E004";
-	}
-	@if $filename == search {
-		$char: "\E005";
-	}
-	@if $filename == twitter {
-		$char: "\E006";
 	}
 
 	@return $char;
@@ -60,21 +45,6 @@
 	}
 }
 
-.icon-arrow-r {
-	@include icon(arrow-r);
-}
-.icon-facebook {
-	@include icon(facebook);
-}
-.icon-g-plus {
-	@include icon(g-plus);
-}
-.icon-play {
-	@include icon(play);
-}
-.icon-search {
-	@include icon(search);
-}
-.icon-twitter {
-	@include icon(twitter);
+.icon-hand {
+	@include icon(hand);
 }
