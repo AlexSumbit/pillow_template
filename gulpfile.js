@@ -37,7 +37,7 @@ gulp.task('browser-sync', function(){
 gulp.task('iconfont', function(){
 	gulp.src(['src/icon/*.svg'])
 		.pipe(iconfontCss({
-			fontName: 'mogo-icons',
+			fontName: 'icons',
 			path: 'src/style/templates/_icons.scss',
 			targetPath: '../style/_icons.scss',
 			fontPath: '../font/'
