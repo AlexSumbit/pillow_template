@@ -44,33 +44,16 @@ a{
 .nav{
 
     &__item{
+        display: inline-block;
         margin-left: 40px;
         text-transform: uppercase;
         font-size: 14px;
         position: relative;
-
-        &:after{
-            display: block;
-            content: "";
-            height: 2px;
-            width: 20px;
-            position: absolute;
-            bottom: -10px;
-            background-color: lightcoral;
-            left: 0;
-            transition: 0.3s width;
-        }
+        animation-duration: 0.5s;
+        transition: 0.3s;
 
         &:hover{
-            &:after{
-                width: 100%;
-            }
-        }
-
-        &--active{
-            &:after{
-                width: 100%;
-            }
+            animation-name: 'bounce';
         }
     }
 }
@@ -166,8 +149,8 @@ a{
 
     &--catalog{
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        left: calc(50% - 100px);
+        transform-origin: 50% 50%;
         text-transform: uppercase;
         bottom: 100px;
         width: 200px;
@@ -175,18 +158,15 @@ a{
         border: 2px solid #fff;
         transition: 0.3s;
         border-radius: 5px;
+        animation-duration: 0.4s;
+        animation-timing-function: linear;
 
         &:hover{
             border-color: lightcoral;
             color: lightcoral;
-            width: 230px;
+            animation-name: "bounce";
         }
     }
-}
-
-@keyframes dots{
-    from{width: 0px}
-    to{width: 35px}
 }
 
 
