@@ -68,6 +68,7 @@
         left: 0;
         width: 100%;
         margin-top: 170px;
+        pointer-events: none;
 
         &:after{
             content: "";
@@ -93,8 +94,8 @@
         &__title{
             margin-top: 0;
             font-family: "Pacifico", sans-serif;
-            font-size: 65px;
-            line-height: 60px;
+            font-size: 85px;
+            line-height: 80px;
             font-weight: lighter;
             letter-spacing: 2px;
             opacity: 0.95;
