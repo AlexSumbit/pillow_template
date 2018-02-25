@@ -30,22 +30,31 @@
         }
     }
 
-    .section--top{
-        .title{
+    .section{
 
-            &__title{
-                font-size: 55px;
-                line-height: 50px;
+        &--top{
+            .title{
+
+                &__title{
+                    font-size: 55px;
+                    line-height: 50px;
+                }
+    
+                &__subtitle{
+                    font-size: 14px;
+                }
             }
-
-            &__subtitle{
-                font-size: 14px;
+    
+            .mobile-menu-visible{
+                transform: translateX(-300px);
             }
         }
-    }
-
-    .mobile-menu-visible{
-        transform: translateX(-300px);
+        
+        &--goods{
+            .good{
+                width: 45%;
+            }
+        }
     }
 }
 
