@@ -8,8 +8,28 @@
         arrows: false,
         zIndex: -1
     });
-})();
 
+    $('.js-slider-portfolio').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        speed: 0,
+        arrows: false,
+        asNavFor: '.js-slider-portfolio-nav',
+        zIndex: 0
+    });
+
+    $('.js-slider-portfolio-nav').slick({
+        autoplay: false,
+        centerMode: true,
+        slidesToShow: 5,
+        focusOnSelect: true,
+        asNavFor: '.js-slider-portfolio',
+        arrows: false
+    });
+
+
+})();
 
 (function menuControll(){
     let headerWidth = 0;
