@@ -27,8 +27,6 @@
         asNavFor: '.js-slider-portfolio',
         arrows: false
     });
-
-
 })();
 
 (function menuControll(){
