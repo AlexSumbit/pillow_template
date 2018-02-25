@@ -13,7 +13,7 @@
 
 (function menuControll(){
     let headerWidth = 0;
-    let padding = 30; //container left and right paddings
+    let padding = 30; //container left + right paddings
 
     $(window).scroll(function(){
         updateHeader();
@@ -43,4 +43,9 @@
     $(".js-burger-opened").click(function(){
         $(".js-nav").removeClass("opened");
     });
+
+    $(".js-nav .nav__item").click(function(){
+        $(".js-nav").removeClass("opened");
+    });
+
 })();
